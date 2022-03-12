@@ -1,0 +1,33 @@
+adva_type: none
+batch_size: 16
+corpus_path: ./model_data/ori_data/corpus.tsv
+corpus_path_for_test: ./model_data/ori_data/mini_corpus.tsv
+data_dir: ./model_data/hold_out
+device: '0'
+eval_metrics:
+  - mrr10
+  - top10acc
+eval_step: 1000
+log_step: 20
+loss_type: cosine
+lr: 5.0e-05
+model_batch_size: 128
+num_easy_neg: 10
+num_epoch: 10
+num_hard_neg: 10
+output_dir: ./output/test1
+pool: cls
+print_input_step: 200
+query_max_len: 32
+query_model_type: roformer
+query_pretrained_model_dir: ./model_data/public_model/roformer_chinese_sim_char_small
+save_times_per_epoch: -1
+share_weight: true
+score_ratio: 20.0
+seed: 2022
+title_max_len: 64
+title_model_type: roformer
+title_pretrained_model_dir: ./model_data/public_model/roformer_chinese_sim_char_small
+topk_path: ./model_data/topk_vec_base_mini.json
+use_topk: 12
+warmup_proportion: 0.1
